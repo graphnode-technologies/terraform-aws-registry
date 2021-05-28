@@ -1,5 +1,4 @@
 
-
 resource "aws_ecr_repository" "this" {
   name = var.name
   tags = {
@@ -31,7 +30,7 @@ resource "aws_ecr_lifecycle_policy" "this" {
             "description": "Keep last 5 prod images",
             "selection": {
                 "tagStatus": "tagged",
-                "tagPrefixList": ["prod", "production"],
+                "tagPrefixList": ["prod", "production", "preproduction"],
                 "countType": "imageCountMoreThan",
                 "countNumber": 5
             },
