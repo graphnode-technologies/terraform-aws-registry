@@ -1,7 +1,3 @@
 variable "name" {
 
 }
-
-variable "project" {
-
-}

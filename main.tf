@@ -1,9 +1,6 @@
 
 resource "aws_ecr_repository" "this" {
   name = var.name
-  tags = {
-    Project = var.project
-  }
 }
 
 resource "aws_ecr_lifecycle_policy" "this" {
